@@ -11,24 +11,18 @@ class StackX{
 		stackArray = new char[max];
 		top = -1;
 	}
-
-	//push (adding)
 	public void push(char c){
 		stackArray[++top] = c;
 	}
-	//poping (deleting)
 	public char pop(){
 		return stackArray[top--];
 	}
-	//peek
 	public char peek(){
 		return stackArray[top];
 	}
-	//isEmpty
 	public boolean isEmpty(){
 		return top == -1;
 	}
-	//isFull
 	public boolean isFull(){
 		return top == maxSize - 1;
 	}
@@ -36,19 +30,15 @@ class StackX{
 
 class BracketChecker{
 	private String input;
-
 	public BracketChecker(String input){
 		this.input = input;
 	}
-
 	public void check(){
 		int length = input.length();
 		StackX stack = new StackX(length);
 		char ch;
-
 		for(int i = 0; i < length; i++){
 			ch = input.charAt(i);
-
 			switch(ch){
 				case '{':
 				case '[':
@@ -71,7 +61,6 @@ class BracketChecker{
 						}	
 					}
 			}
-
 		}
 		if(!stack.isEmpty()){
 			System.out.print("There are unclosed brackets" + "\n");
@@ -85,7 +74,6 @@ class BracketCheckApp{
 		while(true){
 			System.out.flush();
 			String line = getInput();
-
 			if(line.equals("exit")){ 
 				break;
 			}else{
@@ -93,9 +81,7 @@ class BracketCheckApp{
 				bc.check();
 			}
 		} 
-
 	}
-
 	private static String getInput() throws IOException{
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);
