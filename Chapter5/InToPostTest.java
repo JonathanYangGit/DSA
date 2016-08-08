@@ -1,5 +1,5 @@
 import java.io.*;
-
+// Test infix.java
 class InToPostTest{
 	public static void main(String[] args) throws IOException{
 		while(true){
@@ -20,3 +20,4 @@ class InToPostTest{
 		return line; 
 	}
 }
+
