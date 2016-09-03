@@ -20,4 +20,3 @@ class InToPostTest{
     return line; 
   }
 }
-
